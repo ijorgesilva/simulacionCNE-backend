@@ -2,17 +2,17 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/
+    destination: /home/ubuntu/html/
 file_exists_behavior: OVERWRITE
 permissions:
-    - object: /var/www/html/
+    - object: /home/ubuntu/html/
       owner: ubuntu
       group: www-data
-hooks:
-  AfterInstall:
-    - location: scripts/install_dependencies
-      timeout: 300
-      runas: ubuntu
-    - location: scripts/configure_project
-      timeout: 300
-      runas: ubuntu
+# hooks:
+#   AfterInstall:
+#     - location: scripts/install_dependencies
+#       timeout: 300
+#       runas: ubuntu
+#     - location: scripts/configure_project
+#       timeout: 300
+#       runas: ubuntu
