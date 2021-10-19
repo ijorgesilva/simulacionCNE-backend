@@ -3,3 +3,8 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies
+      timeout: 300
+      runas: root

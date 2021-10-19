@@ -1,0 +1,17 @@
+#!/bin/bash
+# https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-simple-codecommit.html
+# LEP Stack
+sudo apt-get install -y nginx php7.4 php7.4-fpm php7.4-cli php7.4-mysql php7.4-curl php7.4-json php-simplexml
+sudo systemctl start nginx
+sudo systemctl enable nginx
+systemctl start php7.4-fpm
+systemctl enable php7.4-fpm
+# TODO: Create Nginx Site https://www.rosehosting.com/blog/how-to-install-php-7-4-with-nginx-on-ubuntu-20-04/
+# TODO: Create .env variable
+# Install Project Dependencies
+sudo apt install -y composer
+composer install
+
+# Fix Permissions
+# sudo chown www-data:www-data -R *
+# sudo chmod 755 -R *
