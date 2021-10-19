@@ -212,6 +212,8 @@ function custom_css_dashboard() {
 
     /* Admin Menu */
     #toplevel_page_upload-heading-true a:hover,
+    #toplevel_page_edit-post_type-periodoelectoral-heading-true a:hover,
+    #toplevel_page_edit-heading-true a:hover,
     #toplevel_page_edit-post_type-redirect-heading-true a:hover,
       #toplevel_page_admin-page-website-general-settings-heading-true a:hover,
       #toplevel_page_edit-post_type-acf-field-group-heading-true a:hover{
@@ -220,6 +222,8 @@ function custom_css_dashboard() {
     }
 
     #toplevel_page_upload-heading-true .wp-menu-image,
+    #toplevel_page_edit-post_type-periodoelectoral-heading-true .wp-menu-image,
+    #toplevel_page_edit-heading-true .wp-menu-image,
     #toplevel_page_edit-post_type-redirect-heading-true .wp-menu-image,
     #toplevel_page_admin-page-website-general-settings-heading-true .wp-menu-image,
     #toplevel_page_edit-post_type-acf-field-group-heading-true .wp-menu-image{
@@ -227,6 +231,8 @@ function custom_css_dashboard() {
     }
 
     #toplevel_page_upload-heading-true .wp-menu-name,
+    #toplevel_page_edit-post_type-periodoelectoral-heading-true .wp-menu-name,
+    #toplevel_page_edit-heading-true .wp-menu-name,
     #toplevel_page_edit-post_type-redirect-heading-true .wp-menu-name,
     #toplevel_page_admin-page-website-general-settings-heading-true .wp-menu-name,
     #toplevel_page_edit-post_type-acf-field-group-heading-true .wp-menu-name{
@@ -334,9 +340,10 @@ add_action( 'admin_menu', 'register_my_custom_menu_page' );
 function register_my_custom_menu_page() {
   
   // Updates | add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
-  add_menu_page( 'Pages & Posts - Menu Heading', 'Pages & Posts', 'edit_posts', 'edit.php?heading=true', '', 'dashicons-minus', 210 );
-  add_menu_page( 'Tools - Menu Heading', 'Tools' , 'edit_posts', 'edit.php?post_type=redirect&heading=true', '', 'dashicons-minus', 280 );
-  add_menu_page( 'Settings - Menu Heading', 'Settings', 'edit_posts', 'admin.php?page=website-general-settings&heading=true', '', 'dashicons-minus', 290 );
+  add_menu_page( 'Simulador - Menu Heading', 'Simulador', 'edit_posts', 'edit.php?post_type=periodoelectoral?heading=true', '', 'dashicons-minus', 200 );
+  add_menu_page( 'Paginas & Posts - Menu Heading', 'Paginas & Posts', 'edit_posts', 'edit.php?heading=true', '', 'dashicons-minus', 210 );
+  add_menu_page( 'Herramientas - Menu Heading', 'Herramientas' , 'edit_posts', 'edit.php?post_type=redirect&heading=true', '', 'dashicons-minus', 280 );
+  add_menu_page( 'Configuraciones - Menu Heading', 'Configuraciones', 'edit_posts', 'admin.php?page=website-general-settings&heading=true', '', 'dashicons-minus', 290 );
   add_menu_page( 'Admin - Menu Heading', 'Admin', 'edit_posts', 'edit.php?post_type=acf-field-group&heading=true', '', 'dashicons-minus', 300 );
 
   // Custom Links
@@ -356,6 +363,12 @@ function wpse_custom_menu_order( $menu_ord ) {
     return array(
         'index.php', // Dashboard
         'separator1', // First separator
+
+        'edit.php?post_type=periodoelectoral?heading=true',  // Simulador Votos
+        'edit.php?post_type=periodoelectoral',
+        'edit.php?post_type=posicion',
+        'edit.php?post_type=candidato',
+        'edit.php?post_type=partido',
 
         'edit.php?heading=true',  // HEADING POSTS AND PAGES
         'edit.php', // Posts

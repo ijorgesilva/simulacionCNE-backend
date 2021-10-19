@@ -75,7 +75,9 @@
           "type:wordpress-muplugin", "wpackagist-plugin/wp-gatsby",
           "type:wordpress-muplugin", "wpackagist-plugin/wp-graphql"
         ],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "web/wp"

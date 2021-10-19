@@ -22,6 +22,22 @@ add_filter('excerpt_more', 'new_excerpt_more');
 add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
 // GLOBAL
+$candidato = get_stylesheet_directory().'/plugins/cpt/candidato.php';
+if ( file_exists($candidato) ) {
+	require_once $candidato;
+}
+$partido = get_stylesheet_directory().'/plugins/cpt/partido.php';
+if ( file_exists($partido) ) {
+	require_once $partido;
+}
+$periodo = get_stylesheet_directory().'/plugins/cpt/periodo.php';
+if ( file_exists($periodo) ) {
+	require_once $periodo;
+}
+$posicion = get_stylesheet_directory().'/plugins/cpt/posicion.php';
+if ( file_exists($posicion) ) {
+	require_once $posicion;
+}
 
 // TOOLS
 $redirects = get_stylesheet_directory().'/plugins/cpt/redirects.php';

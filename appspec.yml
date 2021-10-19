@@ -6,13 +6,13 @@ files:
 file_exists_behavior: OVERWRITE
 permissions:
     - object: /home/ubuntu/html/
-      owner: ubuntu
+      owner: www-data
       group: www-data
-# hooks:
-#   AfterInstall:
+hooks:
+  AfterInstall:
 #     - location: scripts/install_dependencies
 #       timeout: 300
 #       runas: ubuntu
-#     - location: scripts/configure_project
-#       timeout: 300
-#       runas: ubuntu
+    - location: scripts/configure_project
+      timeout: 300
+      runas: ubuntu
