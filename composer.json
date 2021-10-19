@@ -2,7 +2,7 @@
   "name": "roots/bedrock",
   "type": "project",
   "license": "MIT",
-  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
+  "description": "Headless CMS para el Simulador del Voto",
   "homepage": "https://roots.io/bedrock/",
   "authors": [
     {
@@ -63,7 +63,19 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/mu-plugins/{$name}/": [
+          "type:wordpress-muplugin",
+          "wpackagist-plugin/clean-image-filenames",
+          "wpackagist-plugin/duplicate-post",
+          "wpackagist-plugin/easy-wp-smtp",
+          "wpackagist-plugin/email-templates",
+          "wpackagist-plugin/enable-media-replace",
+          "wpackagist-plugin/imsanity",
+          "wpackagist-plugin/svg-support",
+          "wpackagist-plugin/wp-email-login",
+          "wpackagist-plugin/wp-gatsby",
+          "wpackagist-plugin/wp-graphql"
+        ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
