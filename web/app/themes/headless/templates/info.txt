@@ -1,0 +1,2 @@
+Email plugin, template rewrite
+SRC: https://es.wordpress.org/plugins/email-templates/

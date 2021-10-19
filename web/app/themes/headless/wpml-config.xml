@@ -1,0 +1,20 @@
+<wpml-config>
+	<custom-types>
+        <custom-type translate="1">vod</custom-type>
+        <custom-type translate="1">series</custom-type>
+        <custom-type translate="1">news</custom-type>
+        <custom-type translate="1">event</custom-type>
+        <custom-type translate="1">section</custom-type>
+        <custom-type translate="1">custommenu</custom-type>
+        <custom-type translate="1">group</custom-type>
+        <custom-type translate="1">grouptype</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">vodtags</taxonomy>
+        <taxonomy translate="1">vodtags</taxonomy>
+        <taxonomy translate="1">eventcategory</taxonomy>
+        <taxonomy translate="1">newscategory</taxonomy>
+        <taxonomy translate="1">grouptags</taxonomy>
+        <taxonomy translate="1">grouptypetags</taxonomy>
+    </taxonomies>
+</wpml-config>
