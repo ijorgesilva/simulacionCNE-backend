@@ -64,17 +64,16 @@
   "extra": {
     "installer-paths": {
       "web/app/mu-plugins/{$name}/": [
-          "type:wordpress-muplugin",
-          "wpackagist-plugin/clean-image-filenames",
-          "wpackagist-plugin/duplicate-post",
-          "wpackagist-plugin/easy-wp-smtp",
-          "wpackagist-plugin/email-templates",
-          "wpackagist-plugin/enable-media-replace",
-          "wpackagist-plugin/imsanity",
-          "wpackagist-plugin/svg-support",
-          "wpackagist-plugin/wp-email-login",
-          "wpackagist-plugin/wp-gatsby",
-          "wpackagist-plugin/wp-graphql"
+          "type:wordpress-muplugin", "wpackagist-plugin/clean-image-filenames",
+          "type:wordpress-muplugin", "wpackagist-plugin/duplicate-post",
+          "type:wordpress-muplugin", "wpackagist-plugin/easy-wp-smtp",
+          "type:wordpress-muplugin", "wpackagist-plugin/email-templates",
+          "type:wordpress-muplugin", "wpackagist-plugin/enable-media-replace",
+          "type:wordpress-muplugin", "wpackagist-plugin/imsanity",
+          "type:wordpress-muplugin", "wpackagist-plugin/svg-support",
+          "type:wordpress-muplugin", "wpackagist-plugin/wp-email-login",
+          "type:wordpress-muplugin", "wpackagist-plugin/wp-gatsby",
+          "type:wordpress-muplugin", "wpackagist-plugin/wp-graphql"
         ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
