@@ -9,8 +9,8 @@
 # TODO: Create Nginx Site https://www.rosehosting.com/blog/how-to-install-php-7-4-with-nginx-on-ubuntu-20-04/
 # TODO: Create .env variable
 # Install Project Dependencies
-sudo apt install -y composer
-sudo composer install
+#sudo apt install -y composer
+composer install
 # Fix Permissions
 # sudo chown www-data:www-data -R *
 # sudo chmod 755 -R *
