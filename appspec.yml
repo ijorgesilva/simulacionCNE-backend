@@ -8,8 +8,8 @@ permissions:
     - object: /var/www/html/
       owner: www-data
       group: www-data
-# hooks:
-#   AfterInstall:
-#     - location: scripts/configure_project
-#       timeout: 300
-#       runas: root
+hooks:
+  AfterInstall:
+    - location: scripts/configure_project
+      timeout: 300
+      runas: root
