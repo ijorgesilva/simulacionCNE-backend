@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/
+file_exists_behavior: OVERWRITE
+permissions:
+    - object: /var/www/html/
+      owner: www-data
+      group: www-data
+# hooks:
+#   AfterInstall:
+#     - location: scripts/configure_project
+#       timeout: 300
+#       runas: root

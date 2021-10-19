@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Installing Project Dependencies"
+cd /var/www/html/
+composer install

@@ -323,32 +323,6 @@ add_action( 'admin_menu', 'wp_adjust_the_wp_menu', 999 );
 *  Description: https://wordpress.stackexchange.com/questions/134857/add-labels-to-admin-menu-how-to
 * --------------------------------------------------------------------------- */
 
-/* Callback Function: It will be visible when you will click the sub menu */
-function submenu_callback() {
-   echo '
-    <div id="screen-meta" class="metabox-prefs">
-
-      <div id="contextual-help-wrap" class="hidden no-sidebar" tabindex="-1" aria-label="Contextual Help Tab">
-        <div id="contextual-help-back"></div>
-        <div id="contextual-help-columns">
-          <div class="contextual-help-tabs">
-            <ul>
-                        </ul>
-          </div>
-
-          
-          <div class="contextual-help-tabs-wrap">
-                      </div>
-        </div>
-      </div>
-        </div>
-    
-        <style>.wp-admin { background-color: #FFFFFF; }</style>
-        <iframe src="https://cms.victorychur.ch/wp-admin/admin.php?page=aam&amp;aamframe=main" id="aam-iframe" style="border: 0px none; height: 1909px; width: 100%; min-height: 450px;" width="100%"></iframe>
-        <script>(()=>{window.onmessage=(e)=>{if (e.data.hasOwnProperty("frameHeight")){document.getElementById("aam-iframe").style.height = `${e.data.frameHeight + 15}px`;}}})()</script>
-
-    <div class="clear"></div>';
-}
 /* ---------------------------------------------------------------------------
 *  Plugin Name: Add Custom Menu Items
 *  Plugin Author: Bombano

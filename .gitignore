@@ -6,6 +6,11 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 
+# Plugins
+!web/app/mu-plugins/admin-columns-pro
+!web/app/mu-plugins/advanced-custom-fields-pro
+!web/app/mu-plugins/wp-graphql-acf
+
 # WordPress
 web/wp
 web/.htaccess
