@@ -1,11 +1,64 @@
 {
     "key": "group_616f4dc709bb3",
-    "title": "Posiciones",
+    "title": "Papeleta",
     "fields": [
+        {
+            "key": "field_61702dffd1568",
+            "label": "Ayuda",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-hide-title acf-hide-box",
+                "id": ""
+            },
+            "message": "<span class=\"dashicons dashicons-warning\"><\/span> Solo los partidos con papeletas creadas serán visibles en el simulador para el periodo electoral seleccionado.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_61702d3813c98",
+            "label": "General",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6170263096a20",
+            "label": "Titulo",
+            "name": "papeleta_partido_papeleta",
+            "type": "text",
+            "instructions": "Únicamente para referencia en el backend.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
         {
             "key": "field_616f51f6c443c",
             "label": "Periodo Electoral Relacionado",
-            "name": "posicion_periodo",
+            "name": "papeleta_partido_periodo",
             "type": "post_object",
             "instructions": "",
             "required": 1,
@@ -26,9 +79,90 @@
             "ui": 1
         },
         {
+            "key": "field_61702ca47a8e1",
+            "label": "Partido Relacionado",
+            "name": "papeleta_partido_partido",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "post_type": [
+                "partido"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_61702f7e338cb",
+            "label": "Posición en Columna",
+            "name": "papeleta_partido_posicion_columna",
+            "type": "range",
+            "instructions": "Posición en la columna de la papeleta en la pantalla inicial.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "min": 1,
+            "max": 7,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_61702fe3338cc",
+            "label": "Posición en Fila",
+            "name": "papeleta_partido_posicion_fila",
+            "type": "range",
+            "instructions": "Posición en la fila de la papeleta en la pantalla inicial.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "min": 1,
+            "max": 7,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_61702cf61bce3",
+            "label": "Candidatos",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_616f4e794b61a",
             "label": "Gobernador",
-            "name": "posicion_gobernador",
+            "name": "papeleta_partido_gobernador",
             "type": "relationship",
             "instructions": "",
             "required": 0,
@@ -58,7 +192,7 @@
         {
             "key": "field_616f4ee94b61b",
             "label": "Alcalde",
-            "name": "posicion_alcalde",
+            "name": "papeleta_partido_alcalde",
             "type": "relationship",
             "instructions": "",
             "required": 0,
@@ -88,7 +222,7 @@
         {
             "key": "field_616f4f044b61c",
             "label": "Consejo Legislativo Lista",
-            "name": "posicion_lista",
+            "name": "papeleta_partido_lista",
             "type": "relationship",
             "instructions": "",
             "required": 0,
@@ -116,7 +250,7 @@
         {
             "key": "field_616f4f2a4b61d",
             "label": "Consejo Legislativo Nominal",
-            "name": "posicion_nominal",
+            "name": "papeleta_partido_nominal",
             "type": "relationship",
             "instructions": "",
             "required": 0,
@@ -160,6 +294,6 @@
     "active": true,
     "description": "",
     "show_in_graphql": 1,
-    "graphql_field_name": "posicionDetails",
-    "modified": 1634685485
+    "graphql_field_name": "papeletaDetails",
+    "modified": 1634742461
 }

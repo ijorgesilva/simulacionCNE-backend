@@ -2,7 +2,8 @@
 echo "Installing Dependencies"
 # https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-simple-codecommit.html
 # LEP Stack
-#sudo apt-get install -y nginx php7.4 php7.4-fpm php7.4-cli php7.4-mysql php7.4-curl php7.4-json php-simplexml
+#sudo apt-get install -y nginx php7.4 php7.4-fpm php7.4-cli php7.4-mysql php7.4-curl php7.4-json php-simplexml php-mbstring
+#sudo apt install -y unzip
 #sudo systemctl start nginx
 #sudo systemctl enable nginx
 #sudo systemctl start php7.4-fpm
@@ -14,7 +15,6 @@ echo "Installing Dependencies"
 # Fix Permissions
 # sudo chown www-data:www-data -R *
 # sudo chmod 755 -R *
-
 ## Install Composer v2
 cd
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"

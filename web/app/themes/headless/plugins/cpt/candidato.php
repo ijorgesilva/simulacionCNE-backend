@@ -62,4 +62,24 @@ function create_candidato_cpt() {
 }
 add_action( 'init', 'create_candidato_cpt', 0 );
 
+// Auto-generate title
+function candidato_auto_title( $value, $post_id, $field ) {
+    if ( get_post_type( $post_id ) == 'candidato' ) {
+
+        $new_title = get_field('candidato_name', $post_id); //candidato_title
+        $new_slug = sanitize_title( $new_title );
+
+        wp_update_post( array(
+            'ID'            => $post_id,
+            'post_title'    => $new_title,
+            'post_name'     => $new_slug,
+            )
+        );
+		
+    }
+    return $value;
+} 
+
+add_filter('acf/update_value', 'candidato_auto_title', 10, 3);
+
 ?>

@@ -11,7 +11,7 @@ function create_periodoelectoral_cpt() {
 		'archives' => __( 'Archivos Periodo Electoral', 'textdomain' ),
 		'attributes' => __( 'Atributos Periodo Electoral', 'textdomain' ),
 		'parent_item_colon' => __( 'Padres Periodo Electoral:', 'textdomain' ),
-		'all_items' => __( 'Todas Periodos Electorales', 'textdomain' ),
+		'all_items' => __( 'Todos los Periodos Electorales', 'textdomain' ),
 		'add_new_item' => __( 'Añadir nueva Periodo Electoral', 'textdomain' ),
 		'add_new' => __( 'Añadir nueva', 'textdomain' ),
 		'new_item' => __( 'Nueva Periodo Electoral', 'textdomain' ),
@@ -63,5 +63,24 @@ function create_periodoelectoral_cpt() {
 
 }
 add_action( 'init', 'create_periodoelectoral_cpt', 0 );
+
+// Auto-generate title
+function periodo_auto_title( $value, $post_id, $field ) {
+    if ( get_post_type( $post_id ) == 'periodoelectoral' ) {
+
+        $new_title = get_field('field_6170263096a20', $post_id); //periodo_title
+        $new_slug = sanitize_title( $new_title );
+
+        wp_update_post( array(
+            'ID'            => $post_id,
+            'post_title'    => $new_title,
+            'post_name'     => $new_slug,
+            )
+        );
+    }
+    return $value;
+} 
+
+add_filter('acf/update_value', 'periodo_auto_title', 10, 3);
 
 ?>
