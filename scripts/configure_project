@@ -1,4 +1,7 @@
 #!/bin/bash
-echo "Installing Project Dependencies"
+echo "Installing Composer Dependencies"
 cd /home/ubuntu/html/
 composer install
+echo "Fixing permissions of newly created folders"
+cd /home/ubuntu/
+sudo chown -R www-data:www-data html/
