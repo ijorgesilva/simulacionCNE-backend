@@ -8,11 +8,15 @@ permissions:
     - object: /home/ubuntu/html/
       owner: www-data
       group: www-data
-# hooks:
-#   AfterInstall:
-#     - location: scripts/install_dependencies
-#       timeout: 300
-#       runas: ubuntu
-    # - location: scripts/configure_project
-    #   timeout: 300
-    #   runas: ubuntu
+hooks:
+  BeforeInstall:
+    - location: scripts/cleanup
+      timeout: 300
+      runas: sudo
+  # AfterInstall:
+  #   - location: scripts/install_dependencies
+  #     timeout: 300
+  #     runas: ubuntu
+  #   - location: scripts/configure_project
+  #     timeout: 300
+  #     runas: ubuntu
