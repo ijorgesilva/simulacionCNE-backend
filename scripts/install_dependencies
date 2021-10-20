@@ -16,8 +16,8 @@ echo "Installing Dependencies"
 # sudo chown www-data:www-data -R *
 # sudo chmod 755 -R *
 ## Install Composer v2
-cd
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-sudo mv /home/ubuntu/composer.phar /usr/bin/composer
+# cd
+# php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+# php composer-setup.php
+# php -r "unlink('composer-setup.php');"
+# sudo mv /home/ubuntu/composer.phar /usr/bin/composer
