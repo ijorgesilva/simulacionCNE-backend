@@ -20,6 +20,86 @@
             "esc_html": 0
         },
         {
+            "key": "field_61717d246d9ee",
+            "label": "[Admin] Partido ID",
+            "name": "papeleta_partido_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-hide",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_617186c29c8bf",
+            "label": "[Admin] Periodo ID",
+            "name": "papeleta_periodo_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-hide",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61718a3ae8814",
+            "label": "[Admin] Auto-generated Title Periodo",
+            "name": "papeleta_periodo_admin_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-hide",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6171aa3539c6f",
+            "label": "[Admin] Auto-generated Title Partido",
+            "name": "papeleta_partido_admin_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-hide",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_61702d3813c98",
             "label": "General",
             "name": "",
@@ -36,30 +116,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_6170263096a20",
-            "label": "Titulo",
-            "name": "papeleta_partido_papeleta",
-            "type": "text",
-            "instructions": "Únicamente para referencia en el backend.",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_616f51f6c443c",
             "label": "Periodo Electoral Relacionado",
             "name": "papeleta_partido_periodo",
-            "type": "post_object",
+            "type": "relationship",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -73,16 +133,19 @@
                 "periodoelectoral"
             ],
             "taxonomy": "",
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": 1,
+            "return_format": "object"
         },
         {
             "key": "field_61702ca47a8e1",
             "label": "Partido Relacionado",
             "name": "papeleta_partido_partido",
-            "type": "post_object",
+            "type": "relationship",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -96,10 +159,13 @@
                 "partido"
             ],
             "taxonomy": "",
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 1,
+            "return_format": "object"
         },
         {
             "key": "field_61702f7e338cb",
@@ -185,7 +251,7 @@
             "elements": [
                 "featured_image"
             ],
-            "min": 1,
+            "min": 0,
             "max": 1,
             "return_format": "object"
         },
@@ -215,7 +281,7 @@
             "elements": [
                 "featured_image"
             ],
-            "min": 1,
+            "min": 0,
             "max": 1,
             "return_format": "object"
         },
@@ -243,7 +309,7 @@
                 "taxonomy"
             ],
             "elements": "",
-            "min": 1,
+            "min": 0,
             "max": 10,
             "return_format": "object"
         },
@@ -271,7 +337,7 @@
                 "taxonomy"
             ],
             "elements": "",
-            "min": 1,
+            "min": 0,
             "max": 10,
             "return_format": "object"
         }
@@ -295,5 +361,5 @@
     "description": "",
     "show_in_graphql": 1,
     "graphql_field_name": "papeletaDetails",
-    "modified": 1634742461
+    "modified": 1634839227
 }

@@ -1,6 +1,6 @@
 {
     "key": "group_5fa02f32081c0",
-    "title": "Redirect Params",
+    "title": "Redirección de URLs",
     "fields": [
         {
             "key": "field_602592a4979c9",
@@ -116,14 +116,7 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "acfe_display_title": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
     "show_in_graphql": 1,
     "graphql_field_name": "redirect",
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1613075523
+    "modified": 1634755079
 }

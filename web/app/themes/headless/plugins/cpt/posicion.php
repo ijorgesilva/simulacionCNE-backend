@@ -1,5 +1,57 @@
 <?php
 
+/* Generate Partido ID: Relashionship Field */
+function papeleta_partido_id( $value, $post_id, $field ) {
+    $partidos = get_field('papeleta_partido_partido', $post_id);
+    if($partidos) {
+      foreach ($partidos as $partido) {
+        $partidoId[] = $partido->ID;
+      }
+      $partidoId = implode(', ', $partidoId);
+      return $partidoId;
+    }
+} 
+add_filter('acf/update_value/name=papeleta_partido_id', 'papeleta_partido_id', 10, 3);
+ 
+/* Generate Periodo ID: Relashionship Field */
+function papeleta_periodo_id( $value, $post_id, $field ) {
+    $periodos = get_field('papeleta_partido_periodo', $post_id);
+    if($periodos) {
+      foreach ($periodos as $periodo) {
+        $periodoId[] = $periodo->ID;
+      }
+      $periodoId = implode(', ', $periodoId);
+      return $periodoId;
+    }
+} 
+add_filter('acf/update_value/name=papeleta_periodo_id', 'papeleta_periodo_id', 10, 3);
+
+/* Generate Periodo Title: Relashionship Field */
+function papeleta_periodo_admin_title( $value, $post_id, $field ) {
+    $periodos = get_field('papeleta_partido_periodo', $post_id);
+    if($periodos) {
+      foreach ($periodos as $periodo) {
+        $periodoId[] = $periodo->post_title;
+      }
+      $periodoId = implode(', ', $periodoId);
+      return $periodoId;
+    }
+} 
+add_filter('acf/update_value/name=papeleta_periodo_admin_title', 'papeleta_periodo_admin_title', 10, 3);
+
+/* Generate Partido Title: Relashionship Field */
+function papeleta_partido_admin_title( $value, $post_id, $field ) {
+    $partidos = get_field('papeleta_partido_partido', $post_id);
+    if($partidos) {
+      foreach ($partidos as $partido) {
+        $partidoId[] = $partido->post_title;
+      }
+      $partidoId = implode(', ', $partidoId);
+      return $partidoId;
+    }
+} 
+add_filter('acf/update_value/name=papeleta_partido_admin_title', 'papeleta_partido_admin_title', 10, 3);
+
 // Register Custom Post Type Papeleta
 function create_posicion_cpt() {
 
@@ -66,8 +118,11 @@ add_action( 'init', 'create_posicion_cpt', 0 );
 function posicion_auto_title( $value, $post_id, $field ) {
     if ( get_post_type( $post_id ) == 'posicion' ) {
 
-        $new_title = get_field('field_6170263096a20', $post_id); //posicion_title
-        $new_slug = sanitize_title( $new_title );
+        $new_title_periodo = get_field('field_61718a3ae8814', $post_id); //papeleta_periodo_admin_title
+		$new_title_partido = get_field('field_6171aa3539c6f', $post_id); //papeleta_partido_admin_title
+
+        $new_slug = sanitize_title( $new_title_periodo ) . '-' . sanitize_title( $new_title_partido );
+		$new_title = $new_title_periodo . ' | ' . $new_title_partido;
 
         wp_update_post( array(
             'ID'            => $post_id,

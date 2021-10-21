@@ -1,6 +1,6 @@
 {
     "key": "group_61702e4979385",
-    "title": "Configuración del Simulador",
+    "title": "Configuracion del Simulador",
     "fields": [
         {
             "key": "field_6170606583247",
@@ -23,7 +23,7 @@
             "key": "field_61702e6ab596d",
             "label": "Periodo Electoral",
             "name": "configuration_periodo",
-            "type": "select",
+            "type": "relationship",
             "instructions": "Seleccione el periodo electoral que desee que sea mostrado en el simulador.",
             "required": 1,
             "conditional_logic": 0,
@@ -33,14 +33,17 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "choices": [],
-            "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
+            "post_type": [
+                "periodoelectoral"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": 1,
+            "return_format": "object"
         },
         {
             "key": "field_6170606d83248",
@@ -122,5 +125,5 @@
     "description": "",
     "show_in_graphql": 1,
     "graphql_field_name": "simulatorConfiguration",
-    "modified": 1634754846
+    "modified": 1634824850
 }
