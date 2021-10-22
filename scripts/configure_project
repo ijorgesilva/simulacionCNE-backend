@@ -1,7 +1,10 @@
 #!/bin/bash
+echo "Making sure plugins folder exists"
+mkdir /home/ubuntu/html/web/app/plugins
 echo "Installing Composer Dependencies"
 cd /home/ubuntu/html/
 composer install
 echo "Fixing permissions of newly created folders"
 cd /home/ubuntu/
 sudo chown -R www-data:www-data html/
+sudo chmod -R 755 html/
