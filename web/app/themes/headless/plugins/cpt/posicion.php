@@ -89,7 +89,7 @@ function create_posicion_cpt() {
 		'description' => __( '', 'textdomain' ),
 		'labels' => $labels,
 		'menu_icon' => 'dashicons-id',
-		'supports' => array('revisions'),
+		'supports' => array('revisions', 'page-attributes'),
 		'taxonomies' => array(),
 		'public' => true,
 		'show_ui' => true,

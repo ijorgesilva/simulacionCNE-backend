@@ -37,7 +37,7 @@ function create_partido_cpt() {
 		'description' => __( '', 'textdomain' ),
 		'labels' => $labels,
 		'menu_icon' => 'dashicons-networking',
-		'supports' => array('revisions'),
+		'supports' => array('revisions', 'page-attributes'),
 		'taxonomies' => array(),
 		'public' => true,
 		'show_ui' => true,

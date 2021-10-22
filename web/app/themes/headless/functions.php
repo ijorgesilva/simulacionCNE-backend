@@ -56,6 +56,11 @@ if ( file_exists($pt) ) {
     require_once $pt;
 }
 
+$acpsettings = get_stylesheet_directory().'/plugins/acp-settings.php';
+if ( file_exists($pt) ) {
+    require_once $acpsettings;
+}
+
 $polylangOptions = get_stylesheet_directory().'/plugins/polylang.php';
 if ( file_exists($polylangOptions) ) {
     require_once $polylangOptions;

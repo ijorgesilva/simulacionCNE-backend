@@ -210,8 +210,8 @@
             "append": ""
         },
         {
-            "key": "field_61702cf61bce3",
-            "label": "Candidatos",
+            "key": "field_617223582546f",
+            "label": "Gobernadores y Consejo Legislativo Estadal",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -229,36 +229,6 @@
             "key": "field_616f4e794b61a",
             "label": "Gobernador",
             "name": "papeleta_partido_gobernador",
-            "type": "relationship",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
-            "post_type": [
-                "candidato"
-            ],
-            "taxonomy": "",
-            "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
-            ],
-            "elements": [
-                "featured_image"
-            ],
-            "min": 0,
-            "max": 1,
-            "return_format": "object"
-        },
-        {
-            "key": "field_616f4ee94b61b",
-            "label": "Alcalde",
-            "name": "papeleta_partido_alcalde",
             "type": "relationship",
             "instructions": "",
             "required": 0,
@@ -304,12 +274,10 @@
             ],
             "taxonomy": "",
             "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
+                "search"
             ],
             "elements": "",
-            "min": 0,
+            "min": "",
             "max": 10,
             "return_format": "object"
         },
@@ -332,12 +300,104 @@
             ],
             "taxonomy": "",
             "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
+                "search"
             ],
             "elements": "",
-            "min": 0,
+            "min": "",
+            "max": 10,
+            "return_format": "object"
+        },
+        {
+            "key": "field_6172237725470",
+            "label": "Alcalde y Consejo Municipal",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_616f4ee94b61b",
+            "label": "Alcalde",
+            "name": "papeleta_partido_alcalde",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "post_type": [
+                "candidato"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 1,
+            "return_format": "object"
+        },
+        {
+            "key": "field_6172234f2546d",
+            "label": "Consejo Municipal Lista",
+            "name": "papeleta_partido_cm_lista",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "post_type": [
+                "candidato"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": 10,
+            "return_format": "object"
+        },
+        {
+            "key": "field_617223532546e",
+            "label": "Consejo Municipal Nominal",
+            "name": "papeleta_partido_cm_nominal",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "post_type": [
+                "candidato"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
             "max": 10,
             "return_format": "object"
         }
@@ -361,5 +421,5 @@
     "description": "",
     "show_in_graphql": 1,
     "graphql_field_name": "papeletaDetails",
-    "modified": 1634839227
+    "modified": 1634916338
 }

@@ -37,7 +37,7 @@ function create_candidato_cpt() {
 		'description' => __( '', 'textdomain' ),
 		'labels' => $labels,
 		'menu_icon' => 'dashicons-businessman',
-		'supports' => array('revisions'),
+		'supports' => array('revisions', 'page-attributes'),
 		'taxonomies' => array(),
 		'public' => true,
 		'show_ui' => true,

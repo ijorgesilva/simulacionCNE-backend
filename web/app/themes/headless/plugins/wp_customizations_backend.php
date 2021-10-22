@@ -88,7 +88,6 @@ function login_logo_url_title() {
 }
 add_filter( 'login_headertext', 'login_logo_url_title' );
 
-
 /* ---------------------------------------------------------------------------
 *  Plugin Name: CSS Login Page
 *  Plugin Author: Bombano
@@ -171,7 +170,6 @@ return '';
 }
 add_filter('the_generator', 'remove_wordpress_version');
 
-
 /* ---------------------------------------------------------------------------
 *  Plugin Name: Remove CSS & JS Version
 *  Plugin Author: Bombano
@@ -180,13 +178,13 @@ add_filter('the_generator', 'remove_wordpress_version');
 * --------------------------------------------------------------------------- */
 add_filter( 'style_loader_src',  'sdt_remove_ver_css_js', 9999, 2 );
 add_filter( 'script_loader_src', 'sdt_remove_ver_css_js', 9999, 2 );
-
 function sdt_remove_ver_css_js( $src, $handle ) {
     $handles_with_version = [ 'style' ]; // <-- Adjust to your needs!
     if ( strpos( $src, 'ver=' ) && ! in_array( $handle, $handles_with_version, true ) )
         $src = remove_query_arg( 'ver', $src );
     return $src;
 }
+
 /* ---------------------------------------------------------------------------
 *  Plugin Name: Custom Admin footer
 *  Plugin Author: Bombano
@@ -196,7 +194,6 @@ function sdt_remove_ver_css_js( $src, $handle ) {
 function remove_footer_admin () {
   echo '';
 }
- 
 add_filter('admin_footer_text', 'remove_footer_admin');
 
 /* ---------------------------------------------------------------------------

@@ -10,6 +10,7 @@ web/app/uploads/*
 !web/app/mu-plugins/admin-columns-pro
 !web/app/mu-plugins/advanced-custom-fields-pro
 !web/app/mu-plugins/wp-graphql-acf
+!web/app/mu-plugins/ac-addon-acf
 
 # WordPress
 web/wp

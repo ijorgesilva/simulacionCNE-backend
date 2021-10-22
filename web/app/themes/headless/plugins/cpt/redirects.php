@@ -36,7 +36,7 @@ function create_redirect_cpt() {
 		'description' 			=> __( 'URL redirects on client side', 'redirect' ),
 		'labels' 				=> $labels,
 		'menu_icon' 			=> 'dashicons-randomize',
-		'supports' 				=> array('custom-fields'),
+		'supports' 				=> array('custom-fields', 'page-attributes'),
 		'taxonomies' 			=> array(),
 		'public' 				=> false,
 		'show_ui' 				=> true,
