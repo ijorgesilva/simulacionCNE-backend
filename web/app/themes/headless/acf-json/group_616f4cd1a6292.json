@@ -20,6 +20,23 @@
             "esc_html": 0
         },
         {
+            "key": "field_6172ecdc6cc09",
+            "label": "General",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_616f4d0892dd2",
             "label": "Título",
             "name": "periodo_title",
@@ -38,6 +55,158 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_6172ecfa6cc0b",
+            "label": "Gobernadores y Consejo Legislativo Estadal",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6173278779596",
+            "label": "Ayuda",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-hide-title acf-hide-box",
+                "id": ""
+            },
+            "message": "Si el número de candidatos seleccionados en la <em>Papeleta<\/em> es mayor que el número maximo permitido abajo, los candidatos adicionales estarán ocultos automáticamente en el simulador.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6172ece96cc0a",
+            "label": "Consejo Legislativo Lista",
+            "name": "periodo_legislative_list",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": 3,
+            "min": "",
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": "puestos"
+        },
+        {
+            "key": "field_6172eda36cc0f",
+            "label": "Consejo Legislativo Nominal",
+            "name": "periodo_legislative_nominal",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": 10,
+            "min": "",
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": "puestos"
+        },
+        {
+            "key": "field_6172ed1d6cc0c",
+            "label": "Alcalde y Consejo Municipal",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_617328a8c2172",
+            "label": "Ayuda",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-hide-title acf-hide-box",
+                "id": ""
+            },
+            "message": "Si el número de candidatos seleccionados en la <em>Papeleta<\/em> es mayor que el número maximo permitido abajo, los candidatos adicionales estarán ocultos automáticamente en el simulador.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6172edca6cc11",
+            "label": "Consejo Municipal Lista",
+            "name": "periodo_municipal_list",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": 3,
+            "min": "",
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": "puestos"
+        },
+        {
+            "key": "field_6172edc96cc10",
+            "label": "Consejo Municipal Nominal",
+            "name": "periodo_municipal_nominal",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": 10,
+            "min": "",
+            "max": 10,
+            "step": "",
+            "prepend": "",
+            "append": "puestos"
         }
     ],
     "location": [
@@ -59,5 +228,5 @@
     "description": "",
     "show_in_graphql": 1,
     "graphql_field_name": "periodoDetails",
-    "modified": 1634742481
+    "modified": 1634937011
 }

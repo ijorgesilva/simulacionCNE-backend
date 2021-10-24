@@ -15,7 +15,7 @@
                 "class": "acf-hide-title acf-hide-box",
                 "id": ""
             },
-            "message": "<span class=\"dashicons dashicons-warning\"><\/span> Solo los partidos con papeletas creadas serán visibles en el simulador para el periodo electoral seleccionado.",
+            "message": "<span class=\"dashicons dashicons-warning\"><\/span> <strong><em>No agregue candidados en más de una papeleta<\/em><\/strong> si desea evitar candidatos repetidos en múltiples partidos.",
             "new_lines": "wpautop",
             "esc_html": 0
         },
@@ -120,7 +120,7 @@
             "label": "Periodo Electoral Relacionado",
             "name": "papeleta_partido_periodo",
             "type": "relationship",
-            "instructions": "",
+            "instructions": "Esta Papeleta solo será visible si el Periodo Electoral seleccionado está activo en la <a href=\"\/wp\/wp-admin\/admin.php?page=website-general-settings\" target='_blank'>Configuración  del sitio<\/a>.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -146,7 +146,7 @@
             "label": "Partido Relacionado",
             "name": "papeleta_partido_partido",
             "type": "relationship",
-            "instructions": "",
+            "instructions": "Todos los candidatos agregados abajo formarán parte del <em>Partido<\/em> seleccionado.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -421,5 +421,5 @@
     "description": "",
     "show_in_graphql": 1,
     "graphql_field_name": "papeletaDetails",
-    "modified": 1634916338
+    "modified": 1634933227
 }

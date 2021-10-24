@@ -68,7 +68,7 @@ add_action( 'init', 'create_periodoelectoral_cpt', 0 );
 function periodo_auto_title( $value, $post_id, $field ) {
     if ( get_post_type( $post_id ) == 'periodoelectoral' ) {
 
-        $new_title = get_field('field_6170263096a20', $post_id); //periodo_title
+        $new_title = get_field('field_616f4d0892dd2', $post_id); //periodo_title
         $new_slug = sanitize_title( $new_title );
 
         wp_update_post( array(
