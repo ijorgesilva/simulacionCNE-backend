@@ -20,7 +20,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": 50
+            "maxlength": ""
         },
         {
             "key": "field_616f517de45c2",
@@ -67,5 +67,5 @@
     "description": "",
     "show_in_graphql": 1,
     "graphql_field_name": "candidatoDetails",
-    "modified": 1634741638
+    "modified": 1635605624
 }
