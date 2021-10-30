@@ -1,6 +1,4 @@
 #!/bin/bash
-echo "Making sure plugins folder exists"
-mkdir /home/ubuntu/html/web/app/plugins
 echo "Installing Composer Dependencies"
 cd /home/ubuntu/html/
 composer install

@@ -39,13 +39,47 @@
             "default_value": ""
         },
         {
+            "key": "field_617cac02a8732",
+            "label": "Presentación",
+            "name": "partido_presentation",
+            "type": "select",
+            "instructions": "<em>Si selecciona logo<\/em>, el mismo será superpuesto con el color de arriba para formar el botón de selección del partido. <em>Si escoge poster<\/em>, el botón estará compuesto únicamente por el mismo gráfico.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "choices": {
+                "logo": "logo",
+                "poster": "poster"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_616f50e4ea80b",
             "label": "Logo",
             "name": "partido_logo",
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_617cac02a8732",
+                        "operator": "==contains",
+                        "value": "logo"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -70,7 +104,15 @@
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_617cac02a8732",
+                        "operator": "==contains",
+                        "value": "poster"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -80,12 +122,12 @@
             "return_format": "array",
             "preview_size": "medium",
             "library": "all",
-            "min_width": 180,
-            "min_height": 80,
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
-            "max_width": 540,
-            "max_height": 240,
-            "max_size": "",
+            "max_width": 1920,
+            "max_height": "",
+            "max_size": "0.4",
             "mime_types": "jpg, png"
         }
     ],
@@ -108,5 +150,5 @@
     "description": "",
     "show_in_graphql": 1,
     "graphql_field_name": "partidoDetails",
-    "modified": 1634738215
+    "modified": 1635560721
 }
