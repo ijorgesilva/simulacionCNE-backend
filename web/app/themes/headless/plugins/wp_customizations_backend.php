@@ -574,10 +574,10 @@ add_filter('acf/settings/show_admin', 'show_hide_acf_menu');
 *  Source: https://developer.yoast.com/duplicate-post/filters-actions/
 * --------------------------------------------------------------------------- */
 function my_custom_enabled_post_types( $enabled_post_types ) {
-  $enabled_post_types[] = 'posicion';
-  $enabled_post_types[] = 'candidato';
-  $enabled_post_types[] = 'partido';
-  $enabled_post_types[] = 'periodoelectoral';
+  // $enabled_post_types[] = 'posicion';
+  // $enabled_post_types[] = 'candidato';
+  // $enabled_post_types[] = 'partido';
+  // $enabled_post_types[] = 'periodoelectoral';
   return $enabled_post_types;
 }
 add_filter('duplicate_post_enabled_post_types', 'my_custom_enabled_post_types');
